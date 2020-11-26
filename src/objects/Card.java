@@ -24,7 +24,11 @@ public class Card {
 	}
 	
 	public BufferedImage getImg() {
+<<<<<<< HEAD
 		return(img);
+=======
+		return img;
+>>>>>>> upstream/master
 	}
 
 	@Override

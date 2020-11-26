@@ -1,14 +1,23 @@
 package objects;
 
+<<<<<<< HEAD
 import java.util.Arrays;
 
 public class Player {
 	private int row, col;
+=======
+import java.awt.Color;
+import java.util.Arrays;
+
+public class Player {
+	private Color colour;
+>>>>>>> upstream/master
 	private boolean playing;
 	private boolean[] found;
 	private Card[] hand;
 	
 	
+<<<<<<< HEAD
 	public Player(int numCards, int row, int col, boolean playing) {
 		hand = new Card[numCards];
 		found = new boolean[numCards];
@@ -17,6 +26,16 @@ public class Player {
 		}
 		this.row = row;
 		this.col = col;
+=======
+	public Player(int numCards, Color colour, boolean playing) {
+		Deck deck = new Deck();
+		hand = new Card[numCards];
+		found = new boolean[numCards];
+		for (int i = 0; i < numCards; i++) {
+			hand[i] = deck.getCard();
+		}
+		this.colour = colour;
+>>>>>>> upstream/master
 		this.playing = playing;
 	}
 
@@ -27,6 +46,13 @@ public class Player {
 	public void setFound(boolean[] found) {
 		this.found = found;
 	}
+<<<<<<< HEAD
+=======
+	
+	public Color getColour() {
+		return colour;
+	}
+>>>>>>> upstream/master
 
 	public Card[] getHand() {
 		return hand;
@@ -36,6 +62,7 @@ public class Player {
 		this.hand = hand;
 	}
 
+<<<<<<< HEAD
 	public int getRow() {
 		return row;
 	}
@@ -52,6 +79,8 @@ public class Player {
 		this.col = col;
 	}
 
+=======
+>>>>>>> upstream/master
 	public boolean isPlaying() {
 		return playing;
 	}
@@ -62,7 +91,14 @@ public class Player {
 
 	@Override
 	public String toString() {
+<<<<<<< HEAD
 		return "Player [row=" + row + ", col=" + col + ", playing=" + playing + ", found=" + Arrays.toString(found)
 				+ ", hand=" + Arrays.toString(hand) + "]";
 	}
+=======
+		return "Player [colour=" + colour + ", playing=" + playing + ", found=" + Arrays.toString(found) + ", hand="
+				+ Arrays.toString(hand) + "]";
+	}
+
+>>>>>>> upstream/master
 }
